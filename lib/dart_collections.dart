@@ -30,4 +30,9 @@ class Students {
     people.add(person);
   }
 
+  void remove(String field, String value) {
+    //remove an item from the List using the removeWhere() List method
+    people.removeWhere((person) => person[field] == value);
+  }
+
 }
