@@ -13,6 +13,10 @@ void main() {
   ]
   ''';
 
- 
+  // Convert JSON to List<Map<String, String>> using dart:convert
+  List<Map<String, String>> data = (jsonDecode(json) as List<dynamic>).cast<Map<String, String>>();
+
+  // Create a Students instance
+  var students = Students(data);
 
 }
