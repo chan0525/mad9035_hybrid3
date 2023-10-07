@@ -11,6 +11,11 @@ class Students {
     }
   }
 
+//Methods
 
+  void sort(String field) {
+    //sort the List based on the field name passed in
+    people.sort((a, b) => a[field].compareTo(b[field]));
+  }
 
 }
