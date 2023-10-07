@@ -25,4 +25,9 @@ class Students {
     }
   }
 
+  void plus(Map<String, String> person) {
+    //add a single Map to the list
+    people.add(person);
+  }
+
 }
