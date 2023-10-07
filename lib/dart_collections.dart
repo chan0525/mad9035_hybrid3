@@ -18,4 +18,11 @@ class Students {
     people.sort((a, b) => a[field].compareTo(b[field]));
   }
 
+  void output() {
+    //loop and print each item in the list
+    for (var person in people) {
+      print('First Name: ${person['firstName']}, Last Name: ${person['lastName']}, Email: ${person['email']}');
+    }
+  }
+
 }
