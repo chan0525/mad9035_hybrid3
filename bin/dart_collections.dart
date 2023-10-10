@@ -36,6 +36,9 @@ void main() {
   // Add the new student using the plus method
   students.plus(newStudent);
 
+  // Sort the data by a specific field
+  students.sort('first');
+
   //Output the list
   students.output();
 
