@@ -26,6 +26,13 @@ void main() {
   // Create a Students instance
   var students = dart_collections.Students(data);
 
+  print("\nOriginal List:");
+
+  //Output the list
+  students.output();
+
+  print("\nAdd new student:");
+
   // Create a new student as a Map
   var newStudent = {
     'first': 'John',
@@ -35,14 +42,18 @@ void main() {
 
   // Add the new student using the plus method
   students.plus(newStudent);
+  students.output();
+
+  print("\nSort list by a specific field:");
 
   // Sort the data by a specific field
   students.sort('first');
+  students.output();
+
+  print("\nDelete one student:");
 
   // Remove a student with a specific first/last name or email
   students.remove('last', 'Shah');
-
-  //Output the list
   students.output();
 
 }
