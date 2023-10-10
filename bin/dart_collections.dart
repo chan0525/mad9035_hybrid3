@@ -39,6 +39,9 @@ void main() {
   // Sort the data by a specific field
   students.sort('first');
 
+  // Remove a student with a specific first/last name or email
+  students.remove('last', 'Shah');
+
   //Output the list
   students.output();
 
