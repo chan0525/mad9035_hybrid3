@@ -26,6 +26,16 @@ void main() {
   // Create a Students instance
   var students = dart_collections.Students(data);
 
+  // Create a new student as a Map
+  var newStudent = {
+    'first': 'John',
+    'last': 'Doe',
+    'email': 'john.doe@here.com',
+  };
+
+  // Add the new student using the plus method
+  students.plus(newStudent);
+
   //Output the list
   students.output();
 
