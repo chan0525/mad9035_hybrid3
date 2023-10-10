@@ -13,15 +13,17 @@ void main() {
   ]
   ''';
 
-  // Convert the JSON string to a List<Map<String, dynamic>>
-  List<Map<String, dynamic>> data = (jsonDecode(json) as List<dynamic>).cast<Map<String, dynamic>>();
+ List<Map<String, dynamic>> data;
 
-  // Now you can work with the data as a List of Maps with dynamic values
-  // for (var item in data) {
-  //   print('First Name: ${item['first']}, Last Name: ${item['last']}, Email: ${item['email']}');
-  // }
-
-
+  try {
+    // Attempt to parse the JSON string
+    // Convert the JSON string to a List<Map<String, dynamic>> so you can work with the data as a List of Maps with dynamic values
+    data = (jsonDecode(json) as List<dynamic>).cast<Map<String, dynamic>>();
+  } catch (e) {
+    // Handle any exceptions that occur during parsing
+    print('Error parsing JSON: $e');
+    return;
+  }
 
   // Create a Students instance
   var students = dart_collections.Students(data);
