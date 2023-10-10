@@ -2,10 +2,10 @@ import 'dart:io';
 
 class Students {
 
-  List< Map<String, String> > people = [];
+  List< Map<String, dynamic> > people = [];
 
   //Constructor
-  Students(List<Map<String, String>> initialData) {
+  Students(List<Map<String, dynamic>> initialData) {
     if (initialData != null) {
       people.addAll(initialData);
     }
@@ -21,11 +21,11 @@ class Students {
   void output() {
     //loop and print each item in the list
     for (var person in people) {
-      print('First Name: ${person['firstName']}, Last Name: ${person['lastName']}, Email: ${person['email']}');
+      print('First Name: ${person['first']}, Last Name: ${person['last']}, Email: ${person['email']}');
     }
   }
 
-  void plus(Map<String, String> person) {
+  void plus(Map<String, dynamic> person) {
     //add a single Map to the list
     people.add(person);
   }
